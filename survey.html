@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta information for character set and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage displayed in the browser tab -->
+    <title>Campus Visit Survey</title>
+    <!-- Linking Google Fonts for styling -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <!-- Linking W3.CSS for layout and styling -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/georgemason.sidearmsports.com/responsive_2021/images/svgs/logo_alternate.svg">
+    <!-- Bootstrap CSS for styling -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery and Bootstrap JS for functionality -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Smooth Scrolling -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            padding-top: 60px; 
+        }
+    </style>
+
+</head>
+
+
+<!-- Styling with CSS (embedded) -->
+
+<!-- Body Styling -->
+    <body class="w3-black">
+        <style>
+            body, h1, h2, h3, h4, h5, h6 {
+        font-family: "Baskerville";
+    }
+    .w3-row-padding img {
+        margin-bottom: 12px;
+    }
+    .w3-sidebar {
+        width: 120px;
+        background-color: #006633;
+    }
+    #main {
+        margin-left: 120px;
+        background-color: #000000; 
+    }
+    .hero {
+        background-image: url('https://source.unsplash.com/1600x500/?university');
+        background-size: cover;
+        background-position: center;
+        padding: 100px 0;
+        color: white;
+        text-align: center;
+    }
+    .hero h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 3.5rem;
+        color: #FFCC33;
+        text-shadow: 0 0 10px rgba(255, 204, 51, 0.8), 0 0 20px rgba(255, 204, 51, 0.6);
+    }
+    .hero p {
+        color: #ffffff;
+        text-shadow: 0 0 10px rgba(0, 102, 51, 0.8), 0 0 20px rgba(0, 102, 51, 0.6);
+    }
+    .section h2 {
+        color: #FFCC33;
+        font-family: 'Poppins', sans-serif;
+        font-size: 2rem;
+        text-align: center;
+    }
+    .section p {
+        color: #fff;
+        font-size: 1.1rem;
+    }
+
+    /* sidebar styles */
+    .w3-sidebar a {
+        font-family: 'Poppins', sans-serif;
+        color: #FFCC33;
+    }
+    .w3-sidebar a:hover {
+        background-color: #FFCC33;
+        color: #000;
+    }
+    /* footer styles */
+    .footer {
+        background-color: #006633;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    .footer a {
+        color: #FFCC33;
+        text-align: center;
+    }
+    .footer a:hover {
+        text-decoration: underline;
+    }
+
+    /* form styling options */
+    .w3-col .w3-card-4 {
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .w3-card-4:hover {
+        background-color: #FFCC33 !important;
+        color: #006633 !important;
+        cursor: pointer;
+        transform: scale(1.05); 
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); 
+        transition: transform 0.3s, background-color 0.3s, color 0.3s; 
+    }
+    .w3-card-5:hover {
+        background-color: #006633 !important;
+        color: #FFCC33  !important; 
+        cursor: pointer;
+        transform: scale(1.05); 
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); 
+        transition: transform 0.3s, background-color 0.3s, color 0.3s; 
+    }
+    .active-card {
+        background-color: #006633 !important;
+        color: #FFCC33!important; 
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    }
+    .w3-sidebar a:hover{
+        color: #FFCC33; 
+    }
+    .survey-form label {
+        color: white;
+    }
+    .survey-form {
+        background: linear-gradient(135deg, #006633, #000000);
+        color: #ffffff; 
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+        transition: background 0.3s ease;
+    }
+    .survey-form:hover {
+        background: linear-gradient(135deg, #FFCC33, #000000); 
+        color: #006633; 
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); 
+        Label { color: white !important; 
+        }   
+    }
+    .survey-form label {
+        color: white !important; 
+    }
+    .survey-form h2 {
+        color: white !important; 
+    }
+    .survey-form input,
+    .survey-form input::placeholder {
+        color: white !important; 
+        border-color: white !important;
+        background-color: rgba(0, 0, 0, 0.3) !important; 
+    }
+    .required
+    {
+        color: red;
+    }
+    .heading-box {
+        border: 5px solid #006633; 
+        padding: 20px;
+        width: fit-content;
+        margin: 0 auto;
+        box-shadow: 0 8px 16px rgba(184, 152, 9, 0.541); 
+        background-color: rgba(0, 0, 0, 0.1); 
+        display: inline-block;
+        text-align: center;
+        margin-left: -110px; 
+        margin-top: 10px;
+        }  
+    </style>
+
+
+    <div class="w3-padding-large" id="main">
+        <section class="hero">
+            <div class="heading-box">
+                <!-- form Heading -->
+            <h1 style="text-align: left; margin-left: 10;">GMU Campus Visit Survey</h1>
+            <p style="text-align: left; margin-left: 20%;">We would love to hear your feedback about your recent campus visit !</p>
+            <div class="w3-text-light-grey w3-padding" id="greeting">
+                <!-- JavaScript greeting placeholder -->
+            </div>
+        
+            <!-- Button to reset the user's name -->
+            <div class="w3-padding">
+                <a href="#" onclick="resetName()" class="w3-text-light-grey">Not you? Click here to change your name.</a>
+            </div>
+            </div>
+        </section>
+
+        <!-- Survey form inputs -->
+        <section class="w3-content w3-text-grey w3-justify" style="padding: 10px;">
+            <form class="w3-container w3-card-4 w3-green survey-form" style="padding: 20px; border-radius: 10px; color: white;width: 100%; margin: 0 auto; margin-left: -5%;" autocomplete="on">
+                <label for="username" class="w3-text-dark-grey" style="color: white;">Full Name <span class="required"> * </span></label>
+                <input class="w3-input w3-border w3-margin-bottom" id="username" type="text" name="username" required placeholder="e.g., Abirami gurumoorthy" autocomplete="name" autofocus>
+
+                <label for="netid" class="w3-text-dark-grey" style="color: white;">GMU NetID</label>
+                <input class="w3-input w3-border w3-margin-bottom" id="gmunetid" type="text" name="netid" placeholder="e.g., agurumoo" autocomplete="username">                
+                
+                <label for="address" class="w3-text-dark-grey">Street Address</label>
+                <input class="w3-input w3-border w3-margin-bottom" id="address" type="text" name="address" placeholder="e.g., 1234 Mason St" autocomplete="street-address">
+            
+                <!-- Address input fields -->
+                <label for="address" class="w3-text-dark-grey">Street Address</label>
+                <input class="w3-input w3-border w3-margin-bottom" id="address" type="text" name="address" placeholder="e.g., 1234 Mason St" autocomplete="street-address">
+
+                <label for="zip" class="w3-text-dark-grey">Zip Code<span class="required"> * </span></label>
+                <input class="w3-input w3-border w3-margin-bottom" id="zip" type="text" name="zip" required placeholder="e.g., 22030" autocomplete="postal-code" onblur="fetchCityState()">
+
+                <!-- City and State placeholders -->
+                <p>City: <span id="city">[Enter a valid zip]</span></p>
+                <p>State: <span id="state">[Enter a valid zip]</span></p>
+                <p id="zip-error" style="color: red;"></p>
+
+            
+                <label for="telephone" class="w3-text-dark-grey">Telephone Number<span class="required"> * </span></label>
+                <input class="w3-input w3-border w3-margin-bottom" id="telephone" type="tel" name="telephone" required placeholder="e.g., 555-123-4567" autocomplete="tel">
+            
+                <label for="email" class="w3-text-dark-grey">Email Address<span class="required"> * </span></label>
+                <input class="w3-input w3-border w3-margin-bottom" id="email" type="email" name="email" required placeholder="e.g., agurumoo@gmu.edu" autocomplete="email">
+            
+                <label for="url" class="w3-text-dark-grey">Website/URL</label>
+                <input class="w3-input w3-border w3-margin-bottom" id="url" type="url" name="url" placeholder="e.g., https://www.example.com" autocomplete="url">
+
+                <label for="date" class="w3-text-dark-grey">Date of Survey<span class="required"> * </span></label>
+                <input class="w3-input w3-border w3-margin-bottom" id="date" type="date" name="date" required>
+
+                <label class="w3-text-dark-grey" style="color: white;">What did you like most about the campus?<span class="required"> * </span></label>
+
+                <div class="w3-margin-bottom">
+                    <input class="w3-check" type="checkbox" id="students" name="liked_most" value="Students">
+                    <label for="students" style="color: white;">Students</label><br>
+
+                    <input class="w3-check" type="checkbox" id="location" name="liked_most" value="Location">
+                    <label for="location" style="color: white;">Location</label><br>
+
+                    <input class="w3-check" type="checkbox" id="campus" name="liked_most" value="Campus">
+                    <label for="campus" style="color: white;">Campus</label><br>
+
+                    <input class="w3-check" type="checkbox" id="atmosphere" name="liked_most" value="Atmosphere">
+                    <label for="atmosphere" style="color: white;">Atmosphere</label><br>
+
+                    <input class="w3-check" type="checkbox" id="dorm_rooms" name="liked_most" value="Dorm Rooms">
+                    <label for="dorm_rooms" style="color: white;">Dorm Rooms</label><br>
+
+                    <input class="w3-check" type="checkbox" id="sports" name="liked_most" value="Sports">
+                    <label for="sports" style="color: white;">Sports</label><br>
+                </div>
+                <label class="w3-text-dark-grey" style="color: white;">How did you become interested in the university?<span class="required"> * </span></label>
+                <div class="w3-margin-bottom">
+                    <input class="w3-radio" type="radio" id="friends" name="interest_source" value="Friends" required>
+                    <label for="friends" style="color: white;">Friends</label><br>
+
+                    <input class="w3-radio" type="radio" id="television" name="interest_source" value="Television" required>
+                    <label for="television" style="color: white;">Television</label><br>
+
+                    <input class="w3-radio" type="radio" id="internet" name="interest_source" value="Internet" required>
+                    <label for="internet" style="color: white;">Internet</label><br>
+
+                    <input class="w3-radio" type="radio" id="other" name="interest_source" value="Other" required>
+                    <label for="other" style="color: white;">Other</label><br>
+                </div>
+                <label for="comments" class="w3-text-dark-grey" style="color: white;">Additional Comments</label>
+                <textarea class="w3-input w3-border w3-margin-bottom" id="comments" name="comments" rows="4" placeholder="Enter any additional comments here"></textarea>
+
+                <!-- Data input field -->
+                <label for="data" class="w3-text-dark-grey" style="color: white;">Enter 10 comma-separated numbers (1-100) <span class="required"> * </span></label>
+                <input class="w3-input w3-border w3-margin-bottom" id="data" type="text" name="data" required placeholder="e.g., 10,20,30,40,50,60,70,80,90,100">
+
+                <!-- Output fields for Average and Maximum -->
+                <label for="average" class="w3-text-dark-grey" style="color: white;">Average</label>
+                <input class="w3-input w3-border w3-margin-bottom" id="average" type="text" name="average" readonly placeholder="Average will be calculated automatically">
+
+                <label for="maximum" class="w3-text-dark-grey" style="color: white;">Maximum</label>
+                <input class="w3-input w3-border w3-margin-bottom" id="maximum" type="text" name="maximum" readonly placeholder="Maximum will be calculated automatically">
+
+                <!-- Error message placeholder -->
+                <p id="error-message" style="color: red;"></p>
+
+
+                <label for="grad_month" class="w3-text-dark-grey" style="color: white;">High-School Graduation Month<span class="required"> * </span></label>
+                <input list="months" id="grad_month" name="grad_month" class="w3-input w3-border w3-margin-bottom" placeholder="Select or type month" required>
+                <datalist id="months">
+                    <option value="January">
+                    <option value="February">
+                    <option value="March">
+                    <option value="April">
+                    <option value="May">
+                    <option value="June">
+                    <option value="July">
+                    <option value="August">
+                    <option value="September">
+                    <option value="October">
+                    <option value="November">
+                    <option value="December">
+                </datalist>
+
+                <label for="grad_year" class="w3-text-dark-grey" style="color: white;">High-School Graduation Year<span class="required"> * </span></label>
+                <input class="w3-input w3-border w3-margin-bottom" id="grad_year" type="number" name="grad_year" min="1950" max="2024" required placeholder="Enter graduation year">
+                 
+                <label for="recommendation" class="w3-text-dark-grey" style="color: white;">How likely are you to recommend this school to prospective students?<span class="required"> * </span></label>
+                <select id="recommendation" name="recommendation" class="w3-input w3-border w3-margin-bottom" required>
+                    <option value="" disabled selected>Click to select one</option>
+                    <option value="Very Likely">Very Likely</option>
+                    <option value="Likely">Likely</option>
+                    <option value="Unlikely">Unlikely</option>
+                </select>
+
+                <button class="w3-button w3-block w3-dark-grey w3-margin-top w3-hover-light-grey" type="reset">Reset</button>
+                <button class="w3-button w3-block w3-dark-grey w3-margin-top w3-hover-light-grey" type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Contact section -->
+    <section class="w3-content w3-justify w3-text-grey" id="contact" style="padding: 40px; margin-bottom: 40px; background-color: #000; border-radius: 10px;">
+        <h2 style="font-family: 'Poppins', sans-serif; font-size: 2.5rem; text-align: center; color: #FFCC33; text-shadow: 0 0 15px rgba(255, 204, 51, 0.8);">
+            Academic Advising
+        </h2>
+        <p style="font-size: 1.2rem; color: #FFCC33; text-align: center;">
+            <strong>Phone:</strong> <a href="tel:+17039931530" style="color: #FFCC33;">703-993-1530</a><br>
+            <strong>Email:</strong> <a href="mailto:csgrad@gmu.edu" style="color: #FFCC33;">csgrad@gmu.edu</a><br>
+            <strong>Website:</strong> <a href="http://cs.gmu.edu/prospective-students/ms-programs/ms-in-cs/" style="color: #FFCC33;" target="_blank">http://cs.gmu.edu/prospective-students/ms-programs/ms-in-cs/</a>
+        </p>
+    </section>
+
+        <!-- footer -->
+        <footer class="footer">
+            <p>&copy; 2024 George Mason University | Computer Science Department</p>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </footer>
+
+
+        <script>
+            // Function to set a cookie with expiration
+            function setCookie(name, value, days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); // Cookie expiration time
+                var expires = "expires=" + date.toUTCString();
+                document.cookie = name + "=" + value + ";" + expires + ";path=/"; // Ensure value is encoded
+                console.log("cookie set"+document.cookie.value);
+            }
+
+            // Function to get the value of a cookie
+            function getCookie(name) {
+                var nameEQ = name + "=";
+                var ca = document.cookie.split(';');
+                for(var i = 0; i < ca.length; i++) {
+                    var c = ca[i].trim(); // Trim leading spaces
+                    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+                    else
+                    {
+                        console.log("Cookie not found");
+                    }
+                }
+                return null;
+            }
+
+            // Function to check the cookie and display greeting
+            function checkCookie() {
+                var user = getCookie("username");
+                if (user) {
+                    displayGreeting(user); // Display greeting if cookie is found
+                } else {
+                    user = prompt("Please enter your name:", "");
+                    if (user != "" && user != null) {
+                        setCookie("username", user, 20); // Set cookie with 20 day expiration
+                        displayGreeting(user); // Display greeting 
+                    }
+                }
+            }
+
+            // Function to display a greeting based on the time of day
+            function displayGreeting(name) {
+                var now = new Date();
+                var hours = now.getHours();
+                var greeting;
+
+                if (hours < 12) {
+                    greeting = "Good Morning";
+                } else if (hours < 18) {
+                    greeting = "Good Afternoon";
+                } else {
+                    greeting = "Good Evening";
+                }
+
+                document.getElementById("greeting").innerHTML = greeting + " " + name + ", welcome to the Survey!";
+            }
+
+            // Function to reset the name and reload the page
+            function resetName() {
+                var user = prompt("Please enter your name:", "");
+                if (user != "" && user != null) {
+                    setCookie("username", user, 365); // Reset cookie with new name
+                    location.reload(); // Reload the page
+                }
+            }
+
+            // Call the checkCookie function when the page loads
+            window.onload = function() {
+                checkCookie();
+            };
+
+            </script>
+
+            <script>
+                // Function to calculate the average and maximum of 10 comma-separated numbers
+                function calculateAverageAndMaximum() {
+                    // Get the input value from the data field
+                    var data = document.getElementById("data").value.trim();
+                    
+                    // Split the string by commas, remove any extra spaces, and convert to an array of numbers
+                    var numbers = data.split(',').map(function(item) {
+                        return parseFloat(item.trim());
+                    });
+
+                    // Validate the input: Check if there are exactly 10 numbers and each number is between 1 and 100
+                    if (numbers.length !== 10 || !numbers.every(num => num >= 1 && num <= 100 && !isNaN(num))) {
+                        document.getElementById("error-message").innerHTML = "Please enter exactly 10 numbers between 1 and 100, separated by commas.";
+                        document.getElementById("average").value = "";  // Clear average field
+                        document.getElementById("maximum").value = "";  // Clear maximum field
+                        return;  // Exit the function if validation fails
+                    } else {
+                        document.getElementById("error-message").innerHTML = ""; // Clear any previous error messages
+                    }
+
+                    // Calculate the average
+                    var sum = numbers.reduce(function(total, num) {
+                        return total + num;
+                    }, 0);
+                    var average = sum / numbers.length;
+
+                    // Calculate the maximum
+                    var maximum = Math.max(...numbers);
+
+                    // Populate the average and maximum fields
+                    document.getElementById("average").value = average.toFixed(2);  // Display average rounded to 2 decimal places
+                    document.getElementById("maximum").value = maximum;
+                }
+
+                // Add an event listener to the data field to trigger the calculation when the user leaves the field
+                document.getElementById("data").addEventListener("blur", calculateAverageAndMaximum);
+
+            </script>
+
+            <script>
+                function validateForm(event) {
+                    event.preventDefault(); // Prevent form from submitting immediately
+
+                    let errors = [];
+                    let form = document.getElementById("surveyForm");
+
+                    // Validate Name (only alphabets)
+                    let name = document.getElementById("username").value;
+                    if (!/^[A-Za-z\s]+$/.test(name)) {
+                        errors.push("Name must contain only alphabets.");
+                        document.getElementById("username").value = ''; // Clear name field on error
+                    }
+
+                    // Validate Address (only alphanumeric characters, numbers, and spaces)
+                    let address = document.getElementById("address").value;
+                    if (!/^[A-Za-z0-9\s]*$/.test(address)) {
+                        errors.push("Address can only contain alphanumeric characters and spaces.");
+                        document.getElementById("address").value = ''; // Clear address field on error
+                    }
+
+                    // Validate at least two checkboxes are checked
+                    let checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
+                    if (checkboxes.length < 2) {
+                        errors.push("Please select at least two options for 'What did you like most about the campus?'.");
+                    }
+
+                    // Validate a radio button is selected
+                    let radioSelected = document.querySelector("input[name='interest_source']:checked");
+                    if (!radioSelected) {
+                        errors.push("Please select one option for 'How did you become interested in the university?'.");
+                    }
+
+                    // Validate email format
+                    let email = document.getElementById("email").value;
+                    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailPattern.test(email)) {
+                        errors.push("Please enter a valid email address.");
+                        document.getElementById("email").value = ''; // Clear email field on error
+                    }
+
+                    // If there are errors, alert them and stop form submission
+                    if (errors.length > 0) {
+                        alert(errors.join("\n"));
+                    } else {
+                        form.submit(); // Submit form if no errors
+                    }
+                }
+
+            </script>
+
+            <script>
+                function fetchCityState() {
+                    var zip = document.getElementById("zip").value.trim(); // Get the entered Zipcode
+                    var zipError = document.getElementById("zip-error");
+                    var cityField = document.getElementById("city");
+                    var stateField = document.getElementById("state");
+
+                    // Clear previous error message
+                    zipError.innerHTML = '';
+
+                    // Check if Zipcode is valid (must be 5 digits)
+                    if (!/^\d{5}$/.test(zip)) {
+                        zipError.innerHTML = "Invalid Zipcode format. Please enter a 5-digit zip code.";
+                        cityField.innerHTML = "[Enter a valid zip]";
+                        stateField.innerHTML = "[Enter a valid zip]";
+                        return;
+                    }
+
+                    // Make an Ajax call to fetch the JSON file
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("GET", "zipcodes.json", true);
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === 4 && xhr.status === 200) {
+                            // Parse the JSON data
+                            var data = JSON.parse(xhr.responseText);
+                            var zipcodes = data.zipcodes;
+
+                            // Find the zipcode in the JSON data
+                            var found = false;
+                            for (var i = 0; i < zipcodes.length; i++) {
+                                if (zipcodes[i].zip === zip) {
+                                    // Populate City and State fields
+                                    cityField.innerHTML = zipcodes[i].city;
+                                    stateField.innerHTML = zipcodes[i].state;
+                                    found = true;
+                                    break;
+                                }
+                            }
+
+                            // If Zipcode was not found, show an error
+                            if (!found) {
+                                zipError.innerHTML = "Invalid Zipcode. Please enter a valid zip.";
+                                cityField.innerHTML = "[Enter a valid zip]";
+                                stateField.innerHTML = "[Enter a valid zip]";
+                            }
+                        }
+                    };
+
+                    // Handle Ajax errors
+                    xhr.onerror = function() {
+                        zipError.innerHTML = "An error occurred while fetching the Zipcode data.";
+                    };
+
+                    // Send the Ajax request
+                    xhr.send();
+                }
+
+            </script>
+            
+</body>
+
+<!-- Bootstrap Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #006633;">
+    <a class="navbar-brand" href="#">
+        <img src="https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/georgemason.sidearmsports.com/responsive_2021/images/svgs/logo_alternate.svg" alt="GMU Logo" style="width:40px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#main"><i class="fa fa-send"></i> Survey</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact"><i class="fa fa-envelope"></i> Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+</html>
